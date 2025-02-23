@@ -2,6 +2,8 @@ package day8
 
 import "fmt"
 
+// https://kamacoder.com/problempage.php?pid=1064
+
 func replaceNumber() {
 	var strByte []byte
 
