@@ -3,14 +3,9 @@ package day4
 // Time Complexity: O(N)
 // Space Complexity: O(1)
 
-type ListNode1 struct {
-	Val  int
-	Next *ListNode1
-}
-
 // 快慢指針
-func removeNthFromEnd(head *ListNode1, n int) *ListNode1 {
-	dummy := &ListNode1{}
+func removeNthFromEnd(head *ListNode, n int) *ListNode {
+	dummy := &ListNode{}
 	dummy.Next = head
 	fast, slow := dummy, dummy
 

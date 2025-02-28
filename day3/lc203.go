@@ -3,16 +3,11 @@ package day3
 // Time Complexity: O(N)
 // Space Complexity: O(1)
 
-type ListNode1 struct {
-	Val  int
-	Next *ListNode1
-}
-
 // 前一個Node檢查下一個的作法比判斷Node本身操作簡潔
 // 使用dummy head
-func removeElements(head *ListNode1, val int) *ListNode1 {
+func removeElements(head *ListNode, val int) *ListNode {
 	//注意是指針宣告
-	dummy := &ListNode1{}
+	dummy := &ListNode{}
 	dummy.Next = head
 
 	curr := dummy // 前一個Node檢查下一個的作法比判斷Node本身操作簡潔

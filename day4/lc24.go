@@ -3,11 +3,6 @@ package day4
 // Time Complexity: O(N)
 // Space Complexity: O(1)
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
 // 注意終止條件, 交換順序
 func swapPairs(head *ListNode) *ListNode {
 	dummy := &ListNode{}

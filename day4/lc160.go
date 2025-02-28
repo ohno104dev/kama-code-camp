@@ -3,13 +3,8 @@ package day4
 // Time Complexity: O(A＋B)
 // Space Complexity: O(1)
 
-type ListNode3 struct {
-	Val  int
-	Next *ListNode3
-}
-
 // 使用快慢指針(19)對齊概念
-func getIntersectionNode(headA, headB *ListNode3) *ListNode3 {
+func getIntersectionNode(headA, headB *ListNode) *ListNode {
 	curA := headA
 	curB := headB
 
@@ -26,7 +21,7 @@ func getIntersectionNode(headA, headB *ListNode3) *ListNode3 {
 	}
 
 	var step int
-	var fast, slow *ListNode3
+	var fast, slow *ListNode
 	if lenA > lenB {
 		step = lenA - lenB
 		fast, slow = headA, headB

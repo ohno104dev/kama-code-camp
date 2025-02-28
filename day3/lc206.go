@@ -3,14 +3,9 @@ package day3
 // Time Complixity: O(N)
 // Space Complixity: O(1)
 
-type listNode2 struct {
-	Val  int
-	Next *listNode2
-}
-
 // 雙指針
-func reverseList(head *listNode2) *listNode2 {
-	var prev *listNode2 = nil
+func reverseList(head *ListNode) *ListNode {
+	var prev *ListNode = nil
 	current := head
 	for current != nil {
 		next := current.Next
