@@ -1,47 +1,48 @@
-package day13
+package day14
 
 // // 遞迴解
 // // 注意題目適合哪種序
-// func maxDepth(root *TreeNode) int {
-// 	return depth(root)
+// func invertTree(root *TreeNode) *TreeNode {
+// 	invertversal(root)
+// 	return root
 // }
 
 // // 1. 確認函數的參數與返回值
-// func depth(node *TreeNode) int {
+// func invertversal(cur *TreeNode) {
 // 	// 2. 確認終止條件
-// 	if node == nil {
-// 		return 0
+// 	if cur == nil {
+// 		return
 // 	}
 
 // 	// 3. 確認單層遞迴的邏輯(此題適合前/後 序)
-// 	l := depth(node.Left)
-// 	r := depth(node.Right)
-// 	return 1 + max(l, r)
+// 	cur.Left, cur.Right = cur.Right, cur.Left
+// 	invertversal(cur.Left)
+// 	invertversal(cur.Right)
 // }
 
 // BFS解
-func maxDepth(root *TreeNode) int {
+func invertTree(root *TreeNode) *TreeNode {
 	if root == nil {
-		return 0
+		return root
 	}
 
 	queue := []*TreeNode{root}
-	depth := 0
 	for len(queue) > 0 {
 		size := len(queue)
-		depth++
 		for size > 0 {
 			node := queue[0]
 			queue = queue[1:]
+			node.Left, node.Right = node.Right, node.Left
 			if node.Left != nil {
 				queue = append(queue, node.Left)
 			}
 			if node.Right != nil {
 				queue = append(queue, node.Right)
 			}
+
 			size--
 		}
 	}
 
-	return depth
+	return root
 }
