@@ -6,7 +6,7 @@ import (
 
 // 遞迴解
 // 二叉搜索樹中序特性解(从小到大有序)
-// 使用指針比較前後節點的(98)概念
+// 使用指針(98)概念, 比較前後節點
 func getMinimumDifference(root *TreeNode) int {
 	var prev *TreeNode
 	min := math.MaxInt64

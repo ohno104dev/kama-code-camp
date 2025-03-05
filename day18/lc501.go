@@ -3,7 +3,7 @@ package day18
 // 遞迴解
 // 注意題目適合哪種序
 // 計數法, 不使用額外空間, 只需要遍歷一次
-// 使用指針比較前後節點的(98)概念
+// 使用指針(98)概念, 比較前後節點
 func findMode(root *TreeNode) []int {
 	res := make([]int, 0)
 	count := 1
