@@ -15,6 +15,7 @@ var (
 )
 
 // 回溯
+// 樹層剪枝概念
 func combinationSum2(candidates []int, target int) [][]int {
 	res1, path1 = make([][]int, 0), make([]int, 0, len(candidates))
 	used = make([]bool, len(candidates))
