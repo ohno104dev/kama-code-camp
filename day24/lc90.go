@@ -18,7 +18,7 @@ var (
 // 樹層剪枝(40)概念
 func subsetsWithDup(nums []int) [][]int {
 	path2, res2, used = make([]int, 0, len(nums)), make([][]int, 0, len(nums)), make([]bool, len(nums))
-	sort.Ints(nums)
+	sort.Ints(nums) // 排序剪枝
 	backtracing(nums, 0)
 
 	return res2
