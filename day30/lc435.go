@@ -5,7 +5,7 @@ import "sort"
 // Time Complexity: O(N*Log(N))
 // Space Complexity: O(N)
 
-// 使用二分查找(452)概念
+// 使用(452)概念
 func eraseOverlapIntervals(intervals [][]int) int {
 	res := 0
 	sort.Slice(intervals, func(i, j int) bool {
