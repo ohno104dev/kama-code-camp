@@ -1,12 +1,12 @@
 package day32
 
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+
 // 確認dp數組含義: 第i個fib的數值為dp[i]
 // 遞推公式: dp[i] = dp[i-1]+dp[i-2]
 // dp數組如何初始化: dp[0]=1, dp[1]=1
 // 遍歷順序: 前向後
-
-// Time Complexity: O(N)
-// Space Complexity: O(N)
 func fib(n int) int {
 	if n < 2 {
 		return n

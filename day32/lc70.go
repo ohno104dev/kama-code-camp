@@ -1,10 +1,12 @@
 package day32
 
+// Time Complexity: O(N)
+// Space Complexity: O(N)
+
 // 確認dp數組含義: 達到i階有dp[i]種方法
 // 遞推公式: dp[i-2]+dp[i-1]
 // dp數組如何初始化: dp[0]無意義, dp[1]=1, dp[2]=2
 // 遍歷順序: 前向後
-
 func climbStairs(n int) int {
 	if n == 1 {
 		return 1
