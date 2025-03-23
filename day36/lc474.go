@@ -4,7 +4,7 @@ package day36
 // Space Complexity: O(n)
 
 // dp[i][j]: i個0, j個1, 最大裝[i][j]個物品
-// 遞推公式: = max(dp[i-x][j-y]+1, dp[i][j])
+// 遞推公式: max(dp[i-x][j-y]+1, dp[i][j])
 // dp初始化: dp[0][0] = 0
 // 遍歷順序: 物品前到後, 容量大到小
 

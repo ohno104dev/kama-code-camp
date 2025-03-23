@@ -4,7 +4,7 @@ package day36
 // Space Complexity: O(n)
 
 // dp[j]: 在容量為j時有幾種方法
-// 遞推公式: = dp[j]+dp[j-nums[i]]
+// 遞推公式: dp[j]+dp[j-nums[i]]
 // dp初始化: dp[0] = 0
 // 遍歷順序: 物品前到後, 容量大到小
 

@@ -4,7 +4,7 @@ package day36
 // Space Complexity: O(n)
 
 // dp[j]: 在容量j的最大價值
-// 遞推公式: = max(dp[j], dp[j-stones[i]]+stones[i])
+// 遞推公式: max(dp[j], dp[j-stones[i]]+stones[i])
 // dp初始化: dp[0] = 0
 // 遍歷順序: 物品前到後, 容量大到小
 
