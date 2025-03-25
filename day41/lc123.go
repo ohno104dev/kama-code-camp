@@ -5,7 +5,7 @@ package day41
 
 // []dp{}: 返回數組dp[0]:持有股票最大現金值, dp[1]:不持有股票最大現金值
 // 遞推公式:
-// 沒有操作			dp[0][0] = 0
+// 沒有操作		   dp[0][0] = 0
 // 第一次持有股票	dp[0][1] = -prices[0]
 // 第一次不持有股票	dp[0][2] = 0
 // 第二次持有股票	dp[0][3] = -prices[0]
@@ -13,7 +13,7 @@ package day41
 // dp初始化: dp[0][0] = 0
 // 遍歷順序: 小到大
 
-// 多次二次買賣
+// 二次買賣
 func maxProfit3(prices []int) int {
 	dp := make([][]int, len(prices))
 	for i := range prices {
