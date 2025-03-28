@@ -6,7 +6,7 @@ package day43
 // dp[i][j]: 以nums1[i-1]為結尾和nums2[j-1]為結尾的最長重複子數組的長度 (可以避免初始化dp[0][j]與dp[i][0])
 // 遞推公式: dp[i][j]=dp[i-1][j-1]+1
 // dp初始化: dp[:] = 0
-// 遍歷順序: 前到後
+// 遍歷順序: 前到後, 上到下
 
 func findLength(nums1 []int, nums2 []int) int {
 	m, n := len(nums1), len(nums2)
