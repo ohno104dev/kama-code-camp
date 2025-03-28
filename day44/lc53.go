@@ -1,5 +1,8 @@
 package day44
 
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
 // dp[i][j]: 以i結尾的最大連續子序列和
 // 遞推公式: max(dp[i-1]+nums[i], nums[i])
 // dp初始化: nums[0]

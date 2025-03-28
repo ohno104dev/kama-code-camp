@@ -1,5 +1,8 @@
 package day44
 
+// Time Complexity: O(n*m)
+// Space Complexity: O(n*m)
+
 // dp[i][j]: 以i-1為結尾的字串s與j-1為解為的字串t的公共相等子序列的最大長度
 // 遞推公式:
 // 相同 dp[i-1][j-1]+1
@@ -11,7 +14,7 @@ package day44
 // 可以用雙指針
 func isSubsequence(s string, t string) bool {
 	dp := make([][]int, len(s)+1)
-	for i := 0; i < len(dp); i++ {
+	for i := range dp {
 		dp[i] = make([]int, len(t)+1)
 	}
 
