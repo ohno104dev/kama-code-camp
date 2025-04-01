@@ -1,4 +1,4 @@
-package day47
+package day48
 
 // Time Complexity: O(n)
 // Space Complexity: O(n)
